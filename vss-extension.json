@@ -1,0 +1,51 @@
+{
+    "manifestVersion": 1,
+    "id": "AgentHandler",
+    "publisher": "SWBC",
+    "version": "0.9.9",
+    "name": "Agent Handler",
+    "description": "Automatically turns off agents that are no longer being used in the current pool",
+    "public": false,
+    "categories": ["Azure Repos", "Azure Pipelines", "Azure Artifacts", "Azure Boards"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "scopes": [
+        "vso.code_write", "vso.build_execute", "vso.work_write"
+    ],
+    "icons": 
+    {
+        "default": "SWBC_Corporate_RGB-128x128.png"
+    },
+    "tags":[
+        "Build", "Agent", "Management", "Savings", "Work Item", "work item", "utility", "Utility"
+    ],
+    "branding": {
+        "color": "rgb(34, 34, 34)",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://dev.azure.com/SWBC-FigWebDev/DevOps/_git/SWBC.ADO.AgentHandler"
+    },
+    "contributions": [
+        {
+            "id": "my-hub",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "AgentHandlerTask"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "AgentHandlerTask",
+            "addressable": true
+        }
+    ]
+}

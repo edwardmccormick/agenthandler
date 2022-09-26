@@ -1,0 +1,28 @@
+{
+  "id": "639CB620-E011-4153-A501-421A96832B64",
+  "name": "AgentHandler",
+  "friendlyName": "Agent Handler",
+  "description": "Task will turn off AWS build agents in the pool that are no longer in use, assuming no queued jobs.",
+  "author": "SWBC",
+  "helpMarkDown": "This Powershell script turns off unused AWS build agents.",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "0",
+    "Minor": "9",
+    "Patch": "8"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "AgentHandler",
+  "groups": [],
+  "inputs": [],
+  "execution": {
+    "PowerShell": {
+      "target": "$(currentDirectory)\\AgentHandler.ps1"
+    }
+  }
+}
